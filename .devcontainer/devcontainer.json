@@ -1,0 +1,20 @@
+{
+  "name": "Fish‑Swipe Codespace",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:20",
+
+  "postCreateCommand": "npm install",
+  "postStartCommand": "npm run dev",
+
+  "forwardPorts": [5173],
+  "portsAttributes": {
+    "5173": {
+      "label": "Fish‑Swipe",
+      "onAutoForward": "openPreview",
+      "protocol": "http"
+    }
+  },
+
+  "settings": {
+    "terminal.integrated.shell.linux": "/bin/bash"
+  }
+}
