@@ -1,0 +1,100 @@
+/* Basic Body Styling */
+body {
+    font-family: sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 800px;
+    width: 100%;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+}
+
+/* Image Styling */
+#image-container {
+    margin-bottom: 20px;
+}
+
+#annotation-image {
+    max-width: 90%; /* Responsive width within its container */
+    max-height: 70vh; /* Max height relative to viewport height */
+    height: auto; /* Maintain aspect ratio */
+    border: 3px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Controls and Buttons */
+#controls {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Space between buttons */
+}
+
+.annotation-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#fish-button {
+    background-color: #5cb85c; /* Green */
+    color: white;
+}
+
+#fish-button:hover {
+    background-color: #4cae4c;
+}
+
+#no-fish-button {
+    background-color: #d9534f; /* Red */
+    color: white;
+}
+
+#no-fish-button:hover {
+    background-color: #c9302c;
+}
+
+/* Message Area Styling */
+#message-area {
+    margin-top: 30px;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+#message-area p {
+    font-size: 1.2em;
+    color: #333;
+}
+
+.completion-message {
+    background-color: #e6ffed; /* Light green for success */
+    border: 1px solid #b2dfbc;
+    color: #2e7d32;
+}
+
+.info-message {
+    background-color: #e3f2fd; /* Light blue for info */
+    border: 1px solid #90caf9;
+    color: #1565c0;
+}

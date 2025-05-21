@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fish Annotator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Fish Annotator</h1>
+        <div id="message-area">
+            {% if all_done %}
+                <p class="completion-message">All images have been annotated. Well done!</p>
+            {% elif not image_path and not all_done %}
+                 {# This case occurs if static/images is empty from the start #}
+                <p class="info-message">No images to annotate found in the 'static/images' folder.</p>
+            {% endif %}
+        </div>
+
+        {% if image_path and not all_done %}
+            <div id="image-container">
+                <img src="{{ url_for('static', filename=image_path) }}" alt="Annotate Fish" id="annotation-image">
+            </div>
+            <input type="hidden" id="current-image-filename" value="{{ current_image_filename }}">
+            <div id="controls">
+                <button id="no-fish-button" class="annotation-button">No Fish</button>
+                <button id="fish-button" class="annotation-button">Fish</button>
+            </div>
+        {% endif %}
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
