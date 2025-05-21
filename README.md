@@ -10,6 +10,7 @@ This is a simple web-based tool for classifying images as containing "fish" or "
 *   Automatically cycles through images located in the `static/images` directory.
 *   Skips images that have already been annotated.
 *   Clean and simple user interface.
+*   Swipe gestures (left for 'no fish', right for 'fish') on the image for quick annotation.
 
 ## Prerequisites
 *   Python 3.x (e.g., Python 3.7 or newer)
@@ -75,7 +76,8 @@ This is a simple web-based tool for classifying images as containing "fish" or "
     *   The application will display the first unannotated image from the `static/images/` folder.
     *   Click the "Fish" button if the image contains a fish.
     *   Click the "No Fish" button if the image does not contain a fish.
-    *   After you click a button, your annotation will be saved, and the next unannotated image will be displayed.
+    *   Alternatively, you can swipe left on the image for 'no fish' or swipe right for 'fish'.
+    *   After you click a button or swipe, your annotation will be saved, and the next unannotated image will be displayed.
 
 4.  **View Annotations:**
     Your annotations (filename and label) are saved in the `annotations.csv` file in the root directory of the project.
@@ -84,7 +86,6 @@ This is a simple web-based tool for classifying images as containing "fish" or "
     Once all images in `static/images/` have been annotated, you will see a message: "All images have been annotated. Well done!"
 
 ## To Do / Future Enhancements (Optional)
-*   Implement Tinder-like swipe gestures for annotation.
 *   Add support for multiple annotation labels or categories.
 *   More robust image management (e.g., subfolders, direct upload through UI).
 *   User authentication for multiple annotators.
